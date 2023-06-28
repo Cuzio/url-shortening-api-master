@@ -17,11 +17,11 @@ const getUrl = async (site) => {
         const data = await response.json();
 
         console.log(data.result.full_short_link);
-        
+
         shortenUrl.innerHTML = data.result.full_short_link;
 
     } catch (error) {
         console.log(error);   
-        alert(error.message);
+        alert('Please input a valid url.');
     }
 }
